@@ -1,0 +1,16 @@
+body{
+    background-color:Black;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 98%;
+    display: flex;
+    width: 99%;
+}
+  
+  svg{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display:inline-block;
+  }

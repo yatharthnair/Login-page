@@ -7,13 +7,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e8390de748.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
-    <link
+    <!-- <script src="Javascript.js"></script> -->
+    <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  /> -->
 </head>
-
 <body>
+    <div class="loader">
+        <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+        <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
+          <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite"
+            begin="0.1"/>    
+        </circle>
+        <circle fill="#fff" stroke="none" cx="26" cy="50" r="6">
+          <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite" 
+            begin="0.2"/>       
+        </circle>
+        <circle fill="#fff" stroke="none" cx="46" cy="50" r="6">
+          <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite" 
+            begin="0.3"/>     
+        </circle>
+      </svg>
+    </div>
     <div class="first">
         <div class="second" style="overflow: hidden;">
             <div class="filter" id="filter"></div>
@@ -22,11 +51,11 @@
                     </svg> -->
             <div class="logo">
                 <div class="logo-photo">
-                    <h3 class="heads" style="animation:fadeInLeft; animation-duration: 2s">SwitchD</h3>
+                    <h3 class="heads">SwitchD</h3>
                 </div>
                 <div class="list-div">
                     <ul class="list">
-                        <li><span class="heads">Marketplace</span></li>
+                        <li><span class="heads"><a style=" text-decoration: none; color: var(--secondary-color);" href="/dashboard.html">Dashboard</a></span></li>
                         <li><span id="darkmode" class="heads">Light Mode</span></li>
                         <li><button class="btn-nav">Log In</button></li>
                         <li><button class="btn-nav">Sign Up</button></li>
@@ -34,22 +63,25 @@
                 </div>
             </div>
             <div class="login">
-                <div class="login-content">     
+                <div class="login-content">
                     <h2 class="login-head">Welcome Back...</h2>
-                    <h4 class="login-body">Please enter your email and password</h4>
-                    <div class="cred-div">
-                        <input type="text" placeholder="Email" class="cred"/>
-                        <i class="fa-regular fa-envelope" style="font-size: 1rem;"></i>
-                    </div>
-                    <div class="cred-div">
-                        <input type="text" name="password" class="cred" placeholder="Password"/>
-                        <i class="fa-sharp fa-regular fa-eye fa-lg" style="font-size: 1rem;"></i>
-                    </div>
+                    <h4 class="login-body">Enter Username and Password</h4>
+                    <form id="LoginForm" method="post" onsubmit="example()" class="form-inp">
+                        <div class="cred-div">
+                            <input type="text" placeholder="Username" id="userid" class="cred"/>
+                            <i class="fa-regular fa-envelope" style="font-size: 1rem;"></i>
+                        </div>
+                        <div class="cred-div">
+                            <input type="password" name="Password" class="cred" id="pass" placeholder="Password" />
+                            <i class="fa-sharp fa-regular fa-eye fa-lg" style="font-size: 1rem;"></i>
+                        </div>
+                        <div class="div-btn">
+                            <input type="submit" name="submit" class="btn-submit" value="Login">
+                            <i class="fa-sharp fa-solid fa-arrow-right" style="font-size:1rem;"></i>
+                        </div>
+                    </form>
                     <h4 class="login-body">By login you agree to our <a style="color:rgb(143, 143, 143)" href="#">terms and conditions</a></h4>
-                    <div class="div-btn">
-                        <input type="button" name="submit" class="btn-submit" value="Login">
-                        <i class="fa-sharp fa-solid fa-arrow-right" style="font-size:1rem;"></i>
-                    </div>
+                    
                     <h4 class="login-body">Dont have an account yet? <a style="color:rgb(143, 143, 143)" href="#">Sign Up</a></h4>
                 </div>
             </div>
@@ -76,17 +108,17 @@
            
         </div>
     </div>
-    <script src="app.js"></script>   
-<!-- <script>
-    var darkmode= document.getElementById("darkmode");
-    darkmode.onclick=function(){
-    document.body.classList.toggle("dark-theme");
-}
+    <script src="app.js">
+        // const loader = document.getElementById("loader");
+        // const loginButton = document.getElementById("login-button");
 
-</script> -->
+        // loginButton.addEventListener('click', function() {
+        // loader.style.display = 'block';
+        // setTimeout(function() {
+        //     loader.style.display = 'none';
+        //     }, 5000);
+        // });
+    </script>   
+    <!-- <script src="/Javascript.js"></script> -->
 </body>
-
-
-
-
 </html>
